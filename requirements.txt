@@ -5,3 +5,5 @@ pandas
 plotly_express
 numpy
 plotly
+smtplib
+
