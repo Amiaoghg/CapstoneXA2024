@@ -126,7 +126,7 @@ if selected == 'History':
     else:
         st.write("No data to display.")
 
-    email_address = st.text_box("Enter Email")
+    email_address = st.text_input("Enter Email")
     
     subject = "Health Alert"
     body = f"Your predicted Addiction Severity (AS) is Highly Addicted. Please take necessary actions."
