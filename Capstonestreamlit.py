@@ -18,7 +18,7 @@ import datetime
 if 'df2' not in st.session_state:
     st.session_state.df2 = pd.DataFrame(columns=['Heart rate', 'Blood Pressure Systolic', 'Blood Pressure Diastolic', 'Sleep Duration', 'Body Temperature', 'Respiratory Rate', 'Skin Conductance', 'Date'])
 
-df = pd.read_csv("df.csv.csv")
+df = pd.read_csv("C:/Users/amiao/XA/Capstone/df.csv.csv")
 df.rename(columns={'BloodPressureSystolic___': 'BloodPressureSystolic', 'BloodPressureDiastolic___': 'BloodPressureDiastolic', 'SleepDuration____': 'SleepDuration','RespiratoryRate____':'RespiratoryRate','SkinConductance____':'SkinConductance', 'Unnamed: 8':"ab",'low/remission _/__':'ba'}, inplace=True)
 df.drop('ab', axis=1, inplace=True)
 df.drop('ba', axis=1, inplace=True)
