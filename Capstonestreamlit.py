@@ -12,6 +12,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import plotly.io as pio
 import datetime
+from PIL import Image
 
 image = Image.open("1.jpg")
 
