@@ -30,7 +30,7 @@ y = df['AS']
 with st.sidebar: 
     selected = option_menu(
         menu_title='Navigation',
-        options=['View', 'History'],
+        options=['View', 'History','About'],
         menu_icon='arrow-down-right-circle-fill',
         icons=['bookmark-check', 'book'],
         default_index=0,
@@ -95,3 +95,5 @@ if selected == 'History':
         st.plotly_chart(fig)
     else:
         st.write("No data to display.")
+    if selected == 'View':
+        st.image("1.png")
