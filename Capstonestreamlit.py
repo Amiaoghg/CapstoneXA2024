@@ -130,7 +130,7 @@ if selected == 'History':
     
     subject = "Health Alert"
     body = f"Your predicted Addiction Severity (AS) is Highly Addicted. Please take necessary actions."
-    send_email(email_address, subject, body)
+    #send_email(email_address, subject, body)
 
 
 
