@@ -77,6 +77,7 @@ if selected == 'View':
         prediction = knn.predict(new_data_scaled)
         st.write(f'Predicted class: {prediction[0]}')
         accuracy = accuracy_score(y_test, y_pred)
+        st.write(f'Accuracy: {accuracy:.2f}')
 
 if selected == 'History':
     st.title('View your history')
