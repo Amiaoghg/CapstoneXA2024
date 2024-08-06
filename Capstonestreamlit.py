@@ -96,4 +96,4 @@ if selected == 'History':
     else:
         st.write("No data to display.")
     if selected == 'View':
-        st.image("1.png")
+        st.image("1.jpg")
