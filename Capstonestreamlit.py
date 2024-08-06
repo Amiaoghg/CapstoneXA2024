@@ -13,6 +13,11 @@ from streamlit_option_menu import option_menu
 import plotly.io as pio
 import datetime
 from PIL import Image
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+
 
 image = Image.open("1.jpg")
 
@@ -29,6 +34,28 @@ df['AddictionSeverity'] = df['AddictionSeverity'].astype(float)
 df.rename(columns={'AddictionSeverity': 'AS'}, inplace=True)
 X = df.drop('AS', axis=1)
 y = df['AS']
+
+def send_email(to_email, subject, body):
+    from_email = "your_email@example.com"
+    password = "your_email_password"
+
+    msg = MIMEMultipart()
+    msg['From'] = from_email
+    msg['To'] = to_email
+    msg['Subject'] = subject
+
+    msg.attach(MIMEText(body, 'plain'))
+
+    try:
+        server = smtplib.SMTP('smtp.example.com', 587)
+        server.starttls()
+        server.login(from_email, password)
+        text = msg.as_string()
+        server.sendmail(from_email, to_email, text)
+        server.quit()
+        st.success('Email sent successfully')
+    except Exception as e:
+        st.error(f'Failed to send email: {e}')
 
 with st.sidebar: 
     selected = option_menu(
@@ -98,6 +125,14 @@ if selected == 'History':
         st.plotly_chart(fig)
     else:
         st.write("No data to display.")
+        
+     if prediction[0] >= 1:
+            subject = "Health Alert"
+            body = f"Your predicted Addiction Severity (AS) is {prediction[0]}. Please take necessary actions."
+            send_email(email_address, subject, body)
+
+
+
 if selected == 'About':
         
         st.title("WHAT IS OPIOID USE DISORDER?")
