@@ -10,7 +10,6 @@ import plotly.graph_objects as go
 import json
 import streamlit as st
 from streamlit_option_menu import option_menu
-import geopandas as gpd
 import plotly.io as pio
 import datetime
 
