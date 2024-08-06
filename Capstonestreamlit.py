@@ -100,4 +100,19 @@ if selected == 'History':
         st.write("No data to display.")
     if selected == 'View':
         
-        st.image(image)
+        st.title("WHAT IS OPIOID USE DISORDER?")
+        st.write("Opioid use disorder (OUD) is a mental health condition in which a problematic pattern of opioid misuse causes distress and/or impairs your daily life.
+Some examples of prescription opioids and opiates include oxycodone, oxymorphone, morphine, codeine and fentanyl. 
+Opioids and opiates can become addictive because they not only dull pain, but can also produce a sense of euphoria in some people. This, combined with tolerance build (needing to increase doses to produce the same effect) can lead to opioid use disorder.")
+        st.title("OPIOID EPIDEMIC IN NUMBERS")
+        st.write("Opioid use disorder is common. It affects over 20 million people worldwide and over 3 million people in the United States. Opioid use disorder is an epidemic in the U.S.Opioids are responsible for over 120,000 deaths worldwide every year")
+        st.title("SYMPTOMS OF OUD")
+        st.write("If you have a physical dependence on opioids, you may experience the following withdrawal symptoms if you stop taking them.
+Generalize pain, chills and fever, diarrhea, dilated pupils, restlessness and agitation, anxiety, nausea and vomiting, intense carvings, elevated heart rate and blood pressure, sweating and insomnia.")
+        st.title("TREATMENTS FOR OUD")
+        st.write("Three U.S. Food and Drug Administration (FDA)-approved medications are commonly used to treat opioid use disorder
+1. Methadone
+2. Buprenorphine
+3. Naltrexone
+")
+
