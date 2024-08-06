@@ -127,7 +127,7 @@ if selected == 'History':
         st.write("No data to display.")
     
     subject = "Health Alert"
-    body = f"Your predicted Addiction Severity (AS) is {prediction}. Please take necessary actions."
+    body = f"Your predicted Addiction Severity (AS) is Highly Addicted. Please take necessary actions."
     send_email(email_address, subject, body)
 
 
