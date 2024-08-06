@@ -125,6 +125,8 @@ if selected == 'History':
         st.plotly_chart(fig)
     else:
         st.write("No data to display.")
+
+    email_address = st.text_box("Enter Email")
     
     subject = "Health Alert"
     body = f"Your predicted Addiction Severity (AS) is Highly Addicted. Please take necessary actions."
