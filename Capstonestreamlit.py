@@ -98,7 +98,7 @@ if selected == 'History':
         st.plotly_chart(fig)
     else:
         st.write("No data to display.")
-    if selected == 'About':
+if selected == 'About':
         
         st.title("WHAT IS OPIOID USE DISORDER?")
         st.write("Opioid use disorder (OUD) is a mental health condition in which a problematic pattern of opioid misuse causes distress and/or impairs your daily life.Some examples of prescription opioids and opiates include oxycodone, oxymorphone, morphine, codeine and fentanyl. Opioids and opiates can become addictive because they not only dull pain, but can also produce a sense of euphoria in some people. This, combined with tolerance build (needing to increase doses to produce the same effect) can lead to opioid use disorder.")
