@@ -13,6 +13,8 @@ from streamlit_option_menu import option_menu
 import plotly.io as pio
 import datetime
 
+image = Image.open("1.jpg")
+
 # Initialize df2 with the 'Date' column
 if 'df2' not in st.session_state:
     st.session_state.df2 = pd.DataFrame(columns=['Heart rate', 'Blood Pressure Systolic', 'Blood Pressure Diastolic', 'Sleep Duration', 'Body Temperature', 'Respiratory Rate', 'Skin Conductance', 'Date'])
@@ -96,4 +98,5 @@ if selected == 'History':
     else:
         st.write("No data to display.")
     if selected == 'View':
-        st.image("1.jpg")
+        
+        st.image(image)
